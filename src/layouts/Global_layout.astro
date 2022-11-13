@@ -1,0 +1,42 @@
+---
+import Head from "../components/Head.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+
+  <body>
+
+    <div id="root">
+
+      <slot name="header"/>
+
+      <main>
+        <slot />
+      </main>
+
+      <Footer />
+
+    </div>
+
+  </body>
+
+</html>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    min-height: max-content;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
+    position: relative;
+  }
+</style>

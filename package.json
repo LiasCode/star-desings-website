@@ -1,27 +1,19 @@
 {
-  "name": "eli-portfolio",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@example/blog",
   "type": "module",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "animate.css": "^4.1.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.2"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.1.0"
-  },
-  "engines": {
-    "node": ">=14"
+    "astro": "^1.6.7",
+    "@astrojs/mdx": "^0.11.6",
+    "@astrojs/rss": "^1.0.3",
+    "@astrojs/sitemap": "^1.0.0"
   }
 }

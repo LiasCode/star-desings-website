@@ -1,6 +1,6 @@
 html {
   font-size: 20px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 *,
 *::after,
@@ -33,6 +33,7 @@ body {
   justify-content: flex-start;
   overflow-x: hidden;
   overflow-y: auto;
+  position: relative;
 }
 
 *::-webkit-scrollbar {
@@ -51,5 +52,5 @@ body {
   background-color: #fff;
   box-shadow: 3px 3px 10px #ccc;
   border-radius: 10px;
-  border : 1px solid #ccc;
+  border: 1px solid #ccc;
 }

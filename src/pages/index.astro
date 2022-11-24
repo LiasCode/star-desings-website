@@ -76,6 +76,7 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
     margin: 30px 0;
     font-size: 2rem;
     text-shadow: 0 0 20px #16d3ff;
+    text-align: center;
   }
   .ofertas,
   .preguntas_frecuentes {
@@ -86,12 +87,13 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
     padding: 0;
   }
   .ver_portafolio {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-shadow: 0 0 20px #16d3ff;
     text-decoration: none;
     border: 1px solid #fff;
     padding: 10px 15px;
     border-radius: 10px;
+    text-align: center;
   }
   .ver_portafolio:hover {
     box-shadow: 0 0 20px #16d3ff;
@@ -100,15 +102,17 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
   .boxes {
     margin: 0 10px;
     width: max-content;
-    max-width: 33%;
+    max-width: 40%;
     flex-grow: 1;
     height: 340px;
     display: flex;
     flex-direction: column;
   }
   .boxes > img {
-    width: 250px;
-    height: 250px;
+    min-width: 150px;
+    min-height: 150px;
+    width: 70%;
+    height: 70%;
     object-fit: contain;
     object-position: top;
     align-self: center;
@@ -131,7 +135,6 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
     color: #66dddd;
     margin-bottom: 10px;
   }
-
   .preguntas_frecuentes > .boxes {
     height: max-content;
   }

@@ -14,14 +14,13 @@ const { bannerPic } = Astro.props;
   </div>
 </div>
 
-<header>
+<header id="header">
   <nav>
     <h2>Bela Star</h2>
     <img src="/logo.png" alt="" srcset="" />
     <a href="/">Inicio</a>
     <a href="/contacteme">Contácteme</a>
     <a href="/proyectos">Proyectos</a>
-    <a href="/compartir">Compartir</a>
   </nav>
 </header>
 
@@ -59,24 +58,32 @@ const { bannerPic } = Astro.props;
     font-size: 3rem;
   }
 
-  header {
-    width: 50%;
-    height: auto;
-  }
-
-  nav {
+  /* Header */
+  #header {
     width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #000d;
+    z-index: 10;
+  }
+  #header > nav {
+    width: 50%;
     height: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
   }
-  nav > h2 {
+  #header > nav > h2 {
     margin: 0 10px;
     font-size: 2rem;
   }
-  nav > img {
+  #header > nav > img {
     width: 60px;
     height: 60px;
     object-fit: contain;
@@ -85,7 +92,7 @@ const { bannerPic } = Astro.props;
     border-radius: 50%;
     border: 1px solid #222;
   }
-  nav > a {
+  #header > nav > a {
     margin: 0 10px;
     text-decoration: none;
     font-size: 1.3rem;

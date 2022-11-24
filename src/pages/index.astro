@@ -20,23 +20,22 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
 <GlobalLayout>
   <Header slot="header" bannerPic={bannerPic} />
 
-  <h2>¿Qué puedes encontrar aquí ?</h2>
+  <h2>¿Qué puedes encontrar aquí?</h2>
 
   <div class="ofertas">
-
     <div class="boxes">
-      <img src={oferta_banners_publicitarios} alt="" />
+      <img loading="eager" src={oferta_banners_publicitarios} alt="" />
       <a href="/contacteme">Banner Plubicitario</a>
     </div>
 
     <div class="boxes">
-      <img src={oferta_diseno_calicatura} alt="" />
+      <img loading="lazy" src={oferta_diseno_calicatura} alt="" />
       <a href="/contacteme">Portadada para tu libro</a>
     </div>
 
     <div class="boxes">
-      <img src={oferta_diseno_portada} alt="" />
-      <a href="/contacteme">Ilustración  o calicatura</a>
+      <img loading="lazy" src={oferta_diseno_portada} alt="" />
+      <a href="/contacteme">Ilustración o calicatura</a>
     </div>
   </div>
 
@@ -46,13 +45,12 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
 
   <a href="/proyectos" class="ver_portafolio">Ver Portafolio Completo</a>
 
-  <h2>Preguntas Frecuentes: </h2>
+  <h2>Preguntas Frecuentes:</h2>
 
   <div class="preguntas_frecuentes">
-
     <div class="boxes">
-      <img src={como_hacer} alt="" />
-      <p>¿Cómo  hacer un pedido?</p>
+      <img loading="lazy" src={como_hacer} alt="" />
+      <p>¿Cómo hacer un pedido?</p>
       <p>
         Vaya a la opción "Contácteme" en el menú, rellena el formulario y haz
         clic en "Enviar formulario".
@@ -60,13 +58,13 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
     </div>
 
     <div class="boxes">
-      <img src={cuanto_tarda} alt="" />
+      <img loading="lazy" src={cuanto_tarda} alt="" />
       <p>¿Cuánto tarda en estar listo un pedido?</p>
       <p>De 7 a 15 días dependiendo de la complejidad del mismo.</p>
     </div>
 
     <div class="boxes">
-      <img src={como_se_me_envia} alt="" />
+      <img loading="lazy" src={como_se_me_envia} alt="" />
       <p>¿Cómo se envía el pedido?</p>
       <p>Por medio del correo electrónico.</p>
     </div>
@@ -79,7 +77,8 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
     font-size: 2rem;
     text-shadow: 0 0 20px #16d3ff;
   }
-  .ofertas, .preguntas_frecuentes {
+  .ofertas,
+  .preguntas_frecuentes {
     width: 100%;
     height: max-content;
     display: flex;
@@ -118,6 +117,11 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
     text-decoration: none;
     font-size: 1.7rem;
     text-align: center;
+    transition: transform 0.5s;
+  }
+  .boxes > a:hover {
+    text-shadow: 0 0 20px #16d3ff;
+    transform: scale(1.05);
   }
   .boxes > p {
     font-size: 1.5rem;
@@ -128,11 +132,17 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
     margin-bottom: 10px;
   }
 
+  .preguntas_frecuentes > .boxes {
+    height: max-content;
+  }
   .preguntas_frecuentes > .boxes > img {
     width: 150px;
     height: 150px;
     min-height: 150px;
     object-fit: contain;
     object-position: center;
+  }
+  .preguntas_frecuentes > .boxes > p {
+    color: #b6defd;
   }
 </style>

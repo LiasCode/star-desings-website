@@ -6,7 +6,7 @@ const { cantidadAMostrar = proyectosFotos.length } = Astro.props;
 <div class="proyectos">
   {
     proyectosFotos.slice(0, cantidadAMostrar).map((foto) => {
-      return <img src={foto.default} />;
+      return <img loading="lazy" src={foto.default} />;
     })
   }
 </div>

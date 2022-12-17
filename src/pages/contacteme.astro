@@ -4,9 +4,70 @@ import GlobalLayout from "../layouts/Global_layout.astro";
 /* Banner */
 import bannerPic from "../assets/banner/banner_contactame.jpg";
 import Header from "../components/Header.astro";
+
+/* Ofertas Imgs  */
+import oferta_banners_publicitarios from "../assets/ofertas/oferta_banners_publicitarios.png";
+import oferta_diseno_calicatura from "../assets/ofertas/oferta_diseño_calicaturas.png";
+import oferta_diseno_portada from "../assets/ofertas/oferta_diseño_portada.png";
+
+const emailDestinatary = "belastar79@gmail.com";
 ---
 
 <GlobalLayout>
-  <Header slot="header" bannerPic={ bannerPic } />
-  <h1>Contacteme</h1>
+
+  <Header slot="header" bannerPic={bannerPic} />
+
+  <h2>Seleccione el pedido deseado</h2>
+
+  <a
+    class="emailLink"
+    href={`mailto:${emailDestinatary}?subject=Solicitar%20Portada%20de%20Libro&body=Usuario%20de%20la%20plataforma%20en%20la%20que%20publicas%20*%3A%0AWattpad%3A%0ABuenovela%3A%0ABooknet%3A%0ATitulo%20de%20la%20historia%20*%3A%0ABreve%20resena%20de%20la%20historia%20*%3A%0APais%20*%3A%0ANombre%20bajo%20el%20que%20publicas%20*%3A%0AGenero%20o%20categoria%20*%3A%0AHay%20algo%20en%20especial%20que%20quieras%20que%20salga%20en%20la%20portada%3F%3A`}
+  >
+    Solicitar portada
+  </a>
+
+  <a
+    class="emailLink"
+    href={`mailto:${emailDestinatary}?subject=Solicitar%20Banner%20Publicitario&body=Usuario%20en%20redes%20sociales*%3A%0AWattpad%3A%0ABuenovela%3A%0ABooknet%3A%0AFacebook%3A%0ATwitter%3A%0AInstagram%3A%0ATiktok%3A%0AAnadir%20otra%3A%0AUsuario%3A%0APais%20*%3A%0AHay%20alguna%20frase%20que%20quieras%20poner%3F%3A%0ANombre%20o%20seudonimo%20*%3A%0AColor%20que%20te%20caracteriza%20*%3A%0AHay%20algo%20en%20especial%20que%20quieras%20que%20salga%20en%20tu%20banner%3F%3A`}
+  >
+    Solicitar Banner
+  </a>
+
+  <a
+    class="emailLink"
+    href={`mailto:${emailDestinatary}?subject=Solicitar%20Ilustracion&body=Pais%20*%3A%0ANombre%20*%3A%0AQue%20deseas%20ilustrar%3F%20*%3A`}
+  >
+    Solicitar Ilustracion
+  </a>
+
+  <a
+    class="emailLink"
+    href={`mailto:${emailDestinatary}?subject=Solicitar%20Edicion&body=Pais%20*%3A%0ANombre%20*%3A%0APromedio%20de%20palabras%20por%20capitulo%20*%3A%0AObra%20completa%20o%20en%20curso%3F%20*%3A%0ABreve%20descripcion%20*%3A`}
+  >
+    Solicitar Edicion
+  </a>
 </GlobalLayout>
+
+<style>
+  h2 {
+    margin: 30px 0;
+    font-size: 2rem;
+    text-shadow: 0 0 20px #16d3ff;
+    text-align: center;
+  }
+
+  .emailLink {
+    font-size: 1.4rem;
+    text-shadow: 0 0 20px #16d3ff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px 0;
+    min-width: 250px;
+  }
+  .emailLink:hover {
+    box-shadow: 0 0 20px #16d3ff;
+  }
+</style>

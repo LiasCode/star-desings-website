@@ -15,6 +15,8 @@ import oferta_diseno_portada from "../assets/ofertas/oferta_diseño_portada.png"
 import cuanto_tarda from "../assets/preguntas_frecuentes/cuanto_tarda.png";
 import como_se_me_envia from "../assets/preguntas_frecuentes/como_se_me_envia.png";
 import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
+
+const emailDestinatary = "belastar79@gmail.com";
 ---
 
 <GlobalLayout>
@@ -25,17 +27,29 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
   <div class="ofertas">
     <div class="boxes">
       <img loading="eager" src={oferta_banners_publicitarios} alt="" />
-      <a href="/contacteme">Banner Plubicitario</a>
+      <a
+        class="emailLink"
+        href={`mailto:${emailDestinatary}?subject=Solicitar%20Banner%20Publicitario&body=Usuario%20en%20redes%20sociales*%3A%0AWattpad%3A%0ABuenovela%3A%0ABooknet%3A%0AFacebook%3A%0ATwitter%3A%0AInstagram%3A%0ATiktok%3A%0AAnadir%20otra%3A%0AUsuario%3A%0APais%20*%3A%0AHay%20alguna%20frase%20que%20quieras%20poner%3F%3A%0ANombre%20o%20seudonimo%20*%3A%0AColor%20que%20te%20caracteriza%20*%3A%0AHay%20algo%20en%20especial%20que%20quieras%20que%20salga%20en%20tu%20banner%3F%3A`}
+        >Banner Plubicitario</a
+      >
     </div>
 
     <div class="boxes">
       <img loading="lazy" src={oferta_diseno_calicatura} alt="" />
-      <a href="/contacteme">Portadada para tu libro</a>
+      <a
+        class="emailLink"
+        href={`mailto:${emailDestinatary}?subject=Solicitar%20Portada%20de%20Libro&body=Usuario%20de%20la%20plataforma%20en%20la%20que%20publicas%20*%3A%0AWattpad%3A%0ABuenovela%3A%0ABooknet%3A%0ATitulo%20de%20la%20historia%20*%3A%0ABreve%20resena%20de%20la%20historia%20*%3A%0APais%20*%3A%0ANombre%20bajo%20el%20que%20publicas%20*%3A%0AGenero%20o%20categoria%20*%3A%0AHay%20algo%20en%20especial%20que%20quieras%20que%20salga%20en%20la%20portada%3F%3A`}
+        >Portadada para tu libro</a
+      >
     </div>
 
     <div class="boxes">
       <img loading="lazy" src={oferta_diseno_portada} alt="" />
-      <a href="/contacteme">Ilustración o calicatura</a>
+      <a
+        class="emailLink"
+        href={`mailto:${emailDestinatary}?subject=Solicitar%20Ilustracion&body=Pais%20*%3A%0ANombre%20*%3A%0AQue%20deseas%20ilustrar%3F%20*%3A`}
+        >Ilustración o calicatura</a
+      >
     </div>
   </div>
 
@@ -48,6 +62,7 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
   <h2>Preguntas Frecuentes:</h2>
 
   <div class="preguntas_frecuentes">
+
     <div class="boxes">
       <img loading="lazy" src={como_hacer} alt="" />
       <p>¿Cómo hacer un pedido?</p>
@@ -69,6 +84,7 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
       <p>Por medio del correo electrónico.</p>
     </div>
   </div>
+
 </GlobalLayout>
 
 <style>
@@ -78,8 +94,7 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
     text-shadow: 0 0 20px #16d3ff;
     text-align: center;
   }
-  .ofertas,
-  .preguntas_frecuentes {
+  .ofertas, .preguntas_frecuentes {
     width: 100%;
     height: max-content;
     display: flex;
@@ -123,10 +138,6 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
     text-align: center;
     transition: transform 0.5s;
   }
-  .boxes > a:hover {
-    text-shadow: 0 0 20px #16d3ff;
-    transform: scale(1.05);
-  }
   .boxes > p {
     font-size: 1.5rem;
     text-align: center;
@@ -150,5 +161,19 @@ import como_hacer from "../assets/preguntas_frecuentes/como_hacer.png";
   }
   .preguntas_frecuentes > .boxes > p:nth-of-type(1) {
     color: #b6defd;
+  }
+
+   .boxes > .emailLink {
+    font-size: 1.6rem;
+    text-shadow: 0 0 20px #16d3ff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .boxes > .emailLink:hover {
+    box-shadow: 0 0 20px #16d3ff;
   }
 </style>

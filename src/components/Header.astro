@@ -17,9 +17,9 @@ const { bannerPic } = Astro.props;
 <header id="header">
   <nav>
     <h2>Bela Star</h2>
-    <img src="/logo.png" alt="" srcset="" />
+    <img src="/logo.png" alt="logo" />
     <a href="/">Inicio</a>
-    <a href="/contacteme">Contácteme</a>
+    {/* <a href="/contacteme">Contácteme</a> */}
     <a href="/proyectos">Proyectos</a>
   </nav>
 </header>
@@ -28,7 +28,7 @@ const { bannerPic } = Astro.props;
   .banner {
     width: 100%;
     height: 500px;
-    min-height:500px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,11 +78,11 @@ const { bannerPic } = Astro.props;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
   }
   #header > nav > h2 {
     min-width: max-content;
-    margin: 0 10px;
+    margin: 0 20px;
     font-size: 2rem;
   }
   #header > nav > img {
@@ -90,12 +90,12 @@ const { bannerPic } = Astro.props;
     height: 60px;
     object-fit: contain;
     object-position: center;
-    margin: 0 10px;
+    margin: 0 20px;
     border-radius: 50%;
     border: 1px solid #222;
   }
   #header > nav > a {
-    margin: 0 10px;
+    margin: 0 20px;
     text-decoration: none;
     font-size: 1.3rem;
   }
